@@ -1,7 +1,7 @@
-project-name: My personal blog
+project-name: Antti's ramblings on life, the universe and everything
 base-path: /
 context:
         static:
-                site-title: My Site Title
+                site-title: Random stuff
         dynamic:
                 all-authors: session.query(Author).all()
