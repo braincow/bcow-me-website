@@ -4,4 +4,4 @@ context:
   static:
     page-title: Welcome to my blog
   dynamic:
-    posts: session.query(Post).filter(Post.published != None).order_by(Post.published.desc()).all()
+    posts: session.query(Post).filter(Post.published != None).order_by(Post.published.desc()).limit(5).all()

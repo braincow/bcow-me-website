@@ -1,0 +1,13 @@
+                <!-- Pager from paginator -->
+                <ul class="pager">
+                    {% if page.has_previous %}
+                    <li class="previous">
+                        <a href="{% url "paged-posts", (page.number - 1) %}">Newer Posts &larr;</a>
+                    </li>
+                    {% endif %}
+                    {% if page.has_next %}
+                    <li class="next">
+                        <a href="{% url "paged-posts", (page.number + 1) %}">Older Posts &rarr;</a>
+                    </li>
+                    {% endif %}
+                </ul>

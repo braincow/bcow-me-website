@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-              {% for post in posts %}
+              {% for post in page %}
                 <div class="post-preview">
                     <a href="{% url "post", post %}">
                         <h2 class="post-title">
@@ -33,16 +33,9 @@
                     </a>
                     <p class="post-meta">Posted by <a href="mailto:{{ post.author.email }}">{{ post.author.first_name }} {{ post.author.last_name }}</a> on {{ post.published.strftime('%d %B %Y') }}</p>
                 </div>
-                {% if posts|length > 5 %}
-                <hr>
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="/posts/1/index.html">Older Posts &rarr;</a>
-                    </li>
-                </ul>
-                {% endif %}
               {% endfor %}
+                <hr>
+                {% include "paginator.html" %}
             </div>
         </div>
     </div>

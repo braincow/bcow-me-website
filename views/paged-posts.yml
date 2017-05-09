@@ -1,0 +1,5 @@
+path:
+  template: /posts/{{ page }}
+  for-each:
+    page: paginate(session.query(Post).order_by(Post.published.desc()), 10)
+template: paged-posts
