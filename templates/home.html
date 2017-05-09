@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('/assets/img/home-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>{{ site_title }}</h1>
+                        <hr class="small">
+                        <span class="subheading">{{ project_name }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              {% for post in posts %}
+                <div class="post-preview">
+                    <a href="{% url "post", post %}">
+                        <h2 class="post-title">
+                            {{ post.title }}
+                        </h2>
+                        <h3 class="post-subtitle">
+                            {{ post.summary }}
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="mailto:{{ post.author.email }}">{{ post.author.first_name }} {{ post.author.last_name }}</a> on {{ post.published.strftime('%d %B %Y') }}</p>
+                </div>
+                {{ "<hr>" if not loop.last }}
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

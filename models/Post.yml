@@ -1,0 +1,7 @@
+title: String
+slug: String
+author: Author       # This will be auto-detected as a foreign key reference
+summary: String
+published: DateTime
+content: Content
+header-image: String

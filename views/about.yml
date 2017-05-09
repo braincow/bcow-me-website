@@ -1,0 +1,5 @@
+path: /about.html
+template: about     # The .html is automatically added by Statik
+context:
+  static:
+    page-title: Me, myself and I

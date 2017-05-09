@@ -1,0 +1,7 @@
+project-name: Blog
+base-path: /
+context:
+        static:
+                site-title: My Site Title
+        dynamic:
+                all-authors: session.query(Author).all()

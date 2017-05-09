@@ -1,0 +1,7 @@
+path: /index.html
+template: home     # The .html is automatically added by Statik
+context:
+  static:
+    page-title: Welcome to my blog
+  dynamic:
+    posts: session.query(Post).filter(Post.published != None).order_by(Post.published.desc()).all()
