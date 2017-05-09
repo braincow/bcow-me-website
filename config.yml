@@ -1,4 +1,4 @@
-project-name: Blog
+project-name: My personal blog
 base-path: /
 context:
         static:
