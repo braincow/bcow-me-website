@@ -1,13 +1,10 @@
-all: clean build publish
+all: clean build watch
 
 clean:
 	rm -rf public
 
 build:
 	statik
-
-publish:
-	scp -r public/* bcow@lakka.kapsi.fi:~/sites/bcow.me/www/
 
 watch:
 	statik --watch
