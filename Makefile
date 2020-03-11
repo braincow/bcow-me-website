@@ -20,6 +20,9 @@ cloudbuild: auth
 	gcloud --project=$(GCLOUD_PROJECT) builds submit \
 		--substitutions=_BUCKET=$(BUCKET)
 
+create-bucket: auth
+	gsutil mb -p $(GCLOUD_PROJECT) -b on -c standard -l europe-north1 $(BUCKET)
+
 bucket-config: auth
 	# set default directory index file
 	gsutil web set -m index.html $(BUCKET)
