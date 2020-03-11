@@ -1,0 +1,17 @@
+steps:
+- name: python:3.7-buster
+  entrypoint: sh
+  args:
+  - '-c'
+  - |
+    pip install -r requirements.txt
+    statik
+- name: gcr.io/cloud-builders/gsutil
+  args:
+  - -m
+  - rsync
+  - -r
+  - public/
+  - gs://www.bcow.me
+
+# eof
