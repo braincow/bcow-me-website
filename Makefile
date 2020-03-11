@@ -28,3 +28,6 @@ bucket-config: auth
 	gsutil web set -m index.html $(BUCKET)
 	# set the 404 file
 	gsutil web set -e 404.html $(BUCKET)
+
+sync-bucket: auth
+	gsutil -m rsync -r public/ $(BUCKET)
