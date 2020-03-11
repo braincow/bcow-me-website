@@ -1,0 +1,5 @@
+path: /404.html
+template: "404"     # The .html is automatically added by Statik
+context:
+  static:
+    page-title: Not found
