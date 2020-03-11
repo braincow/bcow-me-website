@@ -14,7 +14,7 @@ build:
 	statik
 
 watch:
-	statik --watch
+	statik --watch --host 127.0.0.1 --port 8080
 
 cloudbuild: auth
 	gcloud --project=$(GCLOUD_PROJECT) builds submit . \
