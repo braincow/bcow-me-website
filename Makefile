@@ -17,7 +17,7 @@ watch:
 	statik --watch
 
 cloudbuild: auth
-	gcloud --project=$(GCLOUD_PROJECT) builds submit \
+	gcloud --project=$(GCLOUD_PROJECT) builds submit . \
 		--substitutions=_BUCKET=$(BUCKET)
 
 create-bucket: auth
