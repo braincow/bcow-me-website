@@ -1,3 +1,6 @@
+substitutions:
+  _BUCKET: gs://www.bcow.me
+
 steps:
 - name: python:3.7-buster
   entrypoint: sh
@@ -12,6 +15,6 @@ steps:
   - rsync
   - -r
   - public/
-  - gs://www.bcow.me
+  - ${_BUCKET}
 
 # eof
