@@ -40,5 +40,5 @@ create-bucket: auth
 	# set the 404 file
 	gsutil web set -e 404.html $(BUCKET)
 
-sync-bucket: auth
+sync-bucket: build
 	gsutil -m rsync -r public/ $(BUCKET)
