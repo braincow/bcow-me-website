@@ -2,18 +2,28 @@ GCLOUD_CONFIG=default
 GCLOUD_PROJECT=bcow-me
 BUCKET=gs://www.bcow.me
 
+all: clean build watch
+
 auth:
 	gcloud config configurations activate $(GCLOUD_CONFIG)
-
-all: clean build watch
 
 clean:
 	rm -rf public
 
+dist-clean: clean
+	rm -rf .venv
+
+venv:
+	virtualenv -p python3 .venv && \
+	source .venv/bin/activate && \
+	pip install -r requirements.txt
+
 build:
+	source .venv/bin/activate && \
 	statik
 
 watch:
+	source .venv/bin/activate && \
 	statik --watch --host 127.0.0.1 --port 8080
 
 cloudbuild: auth
