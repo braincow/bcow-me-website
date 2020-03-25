@@ -1,0 +1,54 @@
+https://keybase.io/bcow
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.bcow.me
+  * I am bcow (https://keybase.io/bcow) on keybase.
+  * I have a public key ASAh0siXZ-dZask8dt8EwcBsrnt6JM1iBVSH2XCpjtvz3Ao
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120f102bc6e2111f90fd59eb0b745528f13bde3fb7b79130641967d6b9310f9ed5b0a",
+      "host": "keybase.io",
+      "kid": "012021d2c89767e7596ac93c76df04c1c06cae7b7a24cd62055487d970a98edbf3dc0a",
+      "uid": "56ae1616c1e126f238429d0fc1411e19",
+      "username": "bcow"
+    },
+    "merkle_root": {
+      "ctime": 1583997618,
+      "hash": "3de88a1081d8e34fa436af98cb6c8f7304ec9920fac8158aa48ee615c8b74909b052242db5d51c2ba1d7cce35cc36a9571aceb770a0bdb34baeb4e88fdaebd3a",
+      "hash_meta": "9924448fd51dc2d36b101cff6a2be6d60191dcd1fd5492276d145d8c470281db",
+      "seqno": 15302175
+    },
+    "service": {
+      "entropy": "I1PTaPtWnvLtfQAHuhpOItPi",
+      "hostname": "www.bcow.me",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.3.0"
+  },
+  "ctime": 1583997660,
+  "expire_in": 504576000,
+  "prev": "05e413c2357a5c8cd3c34292818a682db7bf29a9d54a043db10e42c065d5c16d",
+  "seqno": 85,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgIdLIl2fnWWrJPHbfBMHAbK57eiTNYgVUh9lwqY7b89wKp3BheWxvYWTESpcCVcQgBeQTwjV6XIzTw0KSgYpoLbe/KanVSgQ9sQ5CwGXVwW3EIPL4Ufu9+RYViLPWQQyxXno3HDLHsKxGa1yPAPDwgYTdAgHCo3NpZ8RAKK1QXH533OFwV39yTbDflk+AkVJqD9QulbsnAGil5otqiPvRP/I18zLO81UNgrqgSe9ELdq0/D8hd1cJ6wyyCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIEJCvoo4JUSaPaiowzVwV7JehTfehHychMQRxBPYuPDco3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/bcow
+

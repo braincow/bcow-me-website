@@ -13,8 +13,16 @@ steps:
   args:
   - -m
   - rsync
+  - -d
   - -r
   - public/
+  - ${_BUCKET}
+- name: gcr.io/cloud-builders/gsutil
+  args:
+  - -m
+  - rsync
+  - -r
+  - static/
   - ${_BUCKET}
 
 # eof
