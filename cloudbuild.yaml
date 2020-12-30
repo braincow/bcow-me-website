@@ -2,11 +2,13 @@ substitutions:
   _BUCKET: gs://www.bcow.me
 
 steps:
-- name: python:3.7-buster
+- name: python:latest
   entrypoint: sh
   args:
   - '-c'
   - |
+    apt update && apt -y install imagemagick
+    ./resize_post_images.sh
     pip install -r requirements.txt
     statik
 - name: gcr.io/cloud-builders/gsutil
